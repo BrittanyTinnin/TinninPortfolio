@@ -69,6 +69,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.fetch(:portfolio, {})
+      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :video, :source_code)
     end
 end
