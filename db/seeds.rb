@@ -9,18 +9,25 @@
 
 12.times do 
     Blog.create!(
-        
+        title: Faker::Book.title,
+        body: Faker::Lorem.paragraph
     )
 end
 
-10.times do
+10.times do |portfolio_item|
     Portfolio.create!(
-
+			title: "Portfolio title #{portfolio_item}",
+			subtitle: Faker::Lorem.word,
+			body: Faker::Lorem.paragraph,
+			thumb_image: Faker::Placeholdit.image('350x200'),
+			video: Faker::Placeholdit.image('600x400'),
+			source_code: Faker::Internet.url
     )
 end
 
-5.times do
-    Skill.create!(
-
-    )
+5.times do |skill|
+	Skill.create!(
+		title: "Rails #{skill}",
+		percent_utilized: 15
+	)
 end
