@@ -9,7 +9,7 @@
 
 12.times do 
     Blog.create!(
-
+        
     )
 end
 
@@ -21,6 +21,6 @@ end
 
 5.times do
     Skill.create!(
-        
+
     )
 end

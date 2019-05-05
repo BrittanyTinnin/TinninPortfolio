@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :blogs
 
   root to: 'pages#home'
+  
   get 'pages/contact'
   get 'pages/about'
 
