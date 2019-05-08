@@ -6,5 +6,5 @@
     <p><%= link_to portfolio.title, portfolio_path(portfolio.id) %></p>
     <p><%= portfolio.subtitle %></p>
     <p><%= portfolio.body %></p>
-    <p><%= image_tag(portfolio.thumb_image) %></p>
+    <p><%= image_tag(portfolio.thumb_image) unless portfolio.thumb_image.nil? %></p>
 <% end %>
