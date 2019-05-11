@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Topic:</strong>
+  <%= @blog.topic.title unless @blog.topic.nil? %>
+</p>
+
+<p>
   <strong>Body:</strong>
   <%= @blog.body %>
 </p>

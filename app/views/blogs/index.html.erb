@@ -37,17 +37,15 @@
       <div class="p-4">
         <h4 class="font-italic">Topics</h4>
         <ol class="list-unstyled">
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Ruby on Rails</a></li>
-          <li><a href="#">React</a></li>
+        <% @topics.each do |topic| %>
+          <li><a href="#"><%= topic.title %></a></li>
+        <% end %>
         </ol>
       </div>
       <div class="p-4">
         <h4 class="font-italic">Elsewhere</h4>
         <ol class="list-unstyled">
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li><a href="https://medium.com/@brittanytinnin" target="_blank">Medium</a></li>
         </ol>
       </div>
     </aside><!-- info on the side -->

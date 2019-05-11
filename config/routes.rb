@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :blogs
 
-  resources :topics, only: [:index, :show, :new]
+  resources :topics
 
   get '/contact', to: 'pages#contact'
   get '/about', to: 'pages#about'
