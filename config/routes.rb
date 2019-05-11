@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'topics/index'
-  get 'topics/show'
   root to: 'pages#home'
   
   resources :portfolios
 
   resources :blogs
+
+  resources :topics, only: [:index, :show, :new]
 
   get '/contact', to: 'pages#contact'
   get '/about', to: 'pages#about'
