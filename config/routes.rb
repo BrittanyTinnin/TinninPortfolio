@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'topics/index'
+  get 'topics/show'
   root to: 'pages#home'
   
   resources :portfolios
