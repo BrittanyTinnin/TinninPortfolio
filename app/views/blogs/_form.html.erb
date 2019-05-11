@@ -21,36 +21,18 @@
       <%= form.text_area :body, class: "form-control", rows: "20" %>
     </div>
 
-    <div class="form-check">
-      <%= form.label :status %>
-      <%= form.radio_button :body, class: "form-check-input", type: "radio" %>
+    <div class="form-group">
+      <%= form.label :status %><br />
+      <%= form.label :status, "Draft", :value => 0  %>
+      <%= form.radio_button :status, "Draft", :checked => true %>
+      <%= form.label :status, "Publish", :value => 1 %>
+      <%= form.radio_button :status, "Publish" %>
     </div>
-     <div class="field">
-    <%= f.label :autolyse %><br />
-    <%= f.label :autolyse, "Yes", :value => "true"  %>
-    <%= f.radio_button :autolyse, true %>
-    <%= f.label :autolyse, "No", :value => "false" %>
-    <%= f.radio_button :autolyse, false, :checked => true %>
-  </div>
 
     <div class="actions">
       <%= form.submit %>
     </div>
   <% end %>
 
-  <form>
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Draft
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Publish
-  </label>
-</div>
-</form>
 
 
