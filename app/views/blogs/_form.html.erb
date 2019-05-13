@@ -29,13 +29,13 @@
 
     <div class="form-group">
       <%= form.label :status, "Draft" %>
-      <%= form.radio_button :status, "draft", value: 0, :checked => true %>
+      <%= form.radio_button :status, "draft", :checked => true %>
       <%= form.label :status, "Publish" %>
-      <%= form.radio_button :status, "publish", value: 1 %>
+      <%= form.radio_button :status, "publish"%>
     </div>
 
     <div class="form-group">
-      <%= form.submit class: "btn btn-primary"%>
+      <%= form.submit class: "btn btn-primary" %>
     </div>
   <% end %>
 
