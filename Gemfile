@@ -55,9 +55,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'friendly_id', '~> 5.2.4'
+gem 'friendly_id', '~> 5.2.4' # generate slug urls
 gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-rails'
-gem 'redcarpet', '~> 3.3', '>= 3.3.4'
-gem 'coderay', '~> 1.1', '>= 1.1.2'
+gem 'jquery-rails' # bootstrap
+gem 'redcarpet', '~> 3.3', '>= 3.3.4' # implement markdown
+gem 'coderay', '~> 1.1', '>= 1.1.2' # implement code syntax highlight
 
