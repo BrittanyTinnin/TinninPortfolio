@@ -58,4 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2.4'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.2'
 
