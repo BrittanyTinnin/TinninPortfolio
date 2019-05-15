@@ -60,4 +60,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails' # bootstrap
 gem 'redcarpet', '~> 3.3', '>= 3.3.4' # implement markdown
 gem 'coderay', '~> 1.1', '>= 1.1.2' # implement code syntax highlight
+gem "mini_magick" # reduces image memory utilization
+gem 'carrierwave', '~> 1.0' # easy way to upload images and videos
 
