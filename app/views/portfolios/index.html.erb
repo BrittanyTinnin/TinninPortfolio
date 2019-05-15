@@ -3,10 +3,39 @@
 <%= link_to "New Item", new_portfolio_path %>
 
 
-<% @portfolios.each do |portfolio| %>
-    <p><%= image_tag(portfolio.thumb_image) unless portfolio.thumb_image.nil? %></p>
-    <p><%= link_to portfolio.title, portfolio_path(portfolio.id) %></p>
-    <p><%= portfolio.subtitle %></p>
-    <p><%= portfolio.body %></p>
-<% end %>
+<main role="main">
 
+            <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+                        <% @portfolios.each do |portfolio| %>
+                                <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                            <%= image_tag(portfolio.thumb_image) unless portfolio.thumb_image.nil? %>
+                                                    <div class="card-body">
+                                                    <p class="card-text"><%= portfolio.title %></p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                        <div class="btn-group">
+                                                                        <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", portfolio_path(portfolio.id) %></button>
+                                                                        </div><!-- div.btn-group -->
+                                                                <small class="text-muted"><%= portfolio.updated_at %></small>
+                                                            </div>
+                                                    </div><!-- div.card-body -->
+                                        </div><!-- div.card mb-4 -->
+                                </div><!-- div.col-md-4 -->
+                        <% end %>
+                        </div><!-- div.row -->
+                    </div><!-- div.container -->
+            </div><!-- div.album py-5 -->
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="{{ site.url }}/">Visit the homepage</a> or read our <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
