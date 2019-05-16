@@ -2,11 +2,11 @@
 <p><%= @portfolio.subtitle %></p>
 <p><%= @portfolio.body %></p>
 <p><%= image_tag(@portfolio.thumb_image.url) unless @portfolio.thumb_image.url.nil? %></p>
+<p><%= video_tag(@portfolio.video_url.to_s, :controls => true) unless @portfolio.video.nil? %></p>
+
 <p><%= link_to "Source Code" %></p>
 
 
 <%= link_to 'Edit', edit_portfolio_path %>
 <%= link_to 'Delete', @portfolio, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', portfolios_path %>
-
-
