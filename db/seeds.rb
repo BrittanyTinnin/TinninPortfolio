@@ -22,7 +22,7 @@ end
 			subtitle: Faker::Lorem.word,
 			body: Faker::Lorem.paragraph,
 			# thumb_image: Faker::Placeholdit.image('350x200'),
-			# video: Faker::Placeholdit.image('600x400'),
+			# main_image: Faker::Placeholdit.image('600x400'),
 			source_code: Faker::Internet.url
     )
 end
