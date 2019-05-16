@@ -21,6 +21,13 @@
     <p><%= form.file_field :thumb_image %></p>
     <p><%= form.hidden_field :thumb_image_cache %></p>
   </div>
+  
+  <div class="field">
+    <p><%= image_tag(portfolio.main_image_url) if portfolio.main_image? %></p>
+    <%= form.label :main_image %>
+    <p><%= form.file_field :main_image %></p>
+    <p><%= form.hidden_field :main_image_cache %></p>
+  </div>
 
   <div class="field">
     <%= form.label :source_code %>

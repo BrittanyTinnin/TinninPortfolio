@@ -1,7 +1,7 @@
 <h1><%= @portfolio.title %></h1>
 <p><%= @portfolio.subtitle %></p>
 <p><%= @portfolio.body %></p>
-<p><%= image_tag(@portfolio.thumb_image.url) unless @portfolio.thumb_image.url.nil? %></p>
+<p><%= image_tag(@portfolio.main_image.url) unless @portfolio.main_image.url.nil? %></p>
 <p><%= link_to "Source Code" %></p>
 
 
