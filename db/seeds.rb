@@ -10,7 +10,9 @@
 12.times do 
     Blog.create!(
         title: Faker::Book.title,
-        body: Faker::Lorem.paragraph
+		body: Faker::Lorem.paragraph,
+		status: "draft",
+		topic_id: 1
     )
 end
 
