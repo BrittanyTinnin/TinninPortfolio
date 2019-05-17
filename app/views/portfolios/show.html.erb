@@ -1,10 +1,21 @@
-<h1><%= @portfolio.title %></h1>
-<p><%= @portfolio.subtitle %></p>
-<p><%= @portfolio.body %></p>
-<p><%= image_tag(@portfolio.main_image.url) unless @portfolio.main_image.url.nil? %></p>
-<p><%= link_to "GitHub", @portfolio.source_code, target: "_blank" %></p>
+<div class="text-center">
+  <h1><%= @portfolio.title %></h1>
+  <p><%= @portfolio.subtitle %></p>
+  <p><%= @portfolio.body %></p>
+  <p><%= link_to @portfolio.source_code do %>
+    <%= octicon "mark-github", :height => 32 %>
+  <% end %></p>
 
 
-<%= link_to 'Edit', edit_portfolio_path %>
-<%= link_to 'Delete', @portfolio, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', portfolios_path %>
+  <div class="card mx-auto" style="width: 40rem;">
+    <%= image_tag(@portfolio.main_image.url, class: 'card-img-top') unless @portfolio.main_image.url.nil? %>
+  </div>
+  <br>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <%= link_to 'Edit', edit_portfolio_path, class: 'btn btn-warning' %>
+    <%= link_to 'Delete', @portfolio, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <%= link_to 'Back', portfolios_path, class: 'btn btn-secondary' %>
+  </div>
+</div>
+
