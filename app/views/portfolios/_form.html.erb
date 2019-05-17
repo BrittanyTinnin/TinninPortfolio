@@ -30,8 +30,8 @@
   
   <div class="custom-file">
     <p><%= image_tag(portfolio.main_image_url) if portfolio.main_image? %></p>
-    <%= form.label :main_image, class: 'custom-file-label' %>
-    <p><%= form.file_field :main_image, class: 'custom-file-input' %></p>
+    <p><%= form.file_field :main_image, class: 'custom-file-input', id: 'customFile'%></p>
+    <%= form.label :main_image, class: 'custom-file-label', for: 'customFile'%>
     <p><%= form.hidden_field :main_image_cache %></p>
   </div>
 
