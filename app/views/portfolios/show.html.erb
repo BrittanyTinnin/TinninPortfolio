@@ -2,7 +2,7 @@
 <p><%= @portfolio.subtitle %></p>
 <p><%= @portfolio.body %></p>
 <p><%= image_tag(@portfolio.main_image.url) unless @portfolio.main_image.url.nil? %></p>
-<p><%= link_to "Source Code" %></p>
+<p><%= link_to "GitHub", @portfolio.source_code, target: "_blank" %></p>
 
 
 <%= link_to 'Edit', edit_portfolio_path %>
