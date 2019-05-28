@@ -1,4 +1,9 @@
 class SkillsController < ApplicationController
+
+  def index
+    @skills = Skill.all
+  end
+
   def new
     @skill = Skill.new
   end
@@ -7,7 +12,7 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to skills_url, notice: 'Skill was successfully created.' }
+        format.html { redirect_to about_url, notice: 'Skill was successfully created.' }
         format.json { render :show, status: :created, location: @skill }
       else
         format.html { render :new }
@@ -19,7 +24,7 @@ class SkillsController < ApplicationController
   def update
     respond_to do |format|
       if @skill.update(skill_params)
-        format.html { redirect_to @skill, notice: 'Skill was successfully updated.' }
+        format.html { redirect_to about_url, notice: 'Skill was successfully updated.' }
         format.json { render :show, status: :ok, location: @skill }
       else
         format.html { render :edit }
@@ -34,6 +39,6 @@ class SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skills).permit(:title)
+    params.require(:skill).permit(:title)
   end
 end

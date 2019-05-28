@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'skills/new'
-  get 'skills/update'
-  get 'skills/delete'
+
   root to: 'pages#home'
+
+  resources :skills
   
   resources :portfolios
 
