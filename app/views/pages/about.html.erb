@@ -1,8 +1,18 @@
-
-<div class="card w-75 text-center">
+<br>
+<div class="card w-75 text-center container-fluid">
   <div class="row no-gutters">
     <div class="col-md-4">
-        <%= image_tag "cute_dog.jpg", width: 400 %>
+      <%= image_tag "cute_dog.jpg", width: 400 %>
+      <% @skills.each do |skill| %>
+        <%= skill.title %>
+        <div class="progress" style="width: 100%">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
+        </div>
+        <div class="card-body">
+          <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+      <br>
+      <% end %> 
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -23,15 +33,17 @@
       </div>
     </div>
   </div>
+ 
 </div>
-    <% @skills.each do |skill| %>
-      <%= skill.title %>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
-      </div>
-      <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-      <br>
-    <% end %>
 
 
 <%= link_to 'Create Skill', new_skill_path %>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
