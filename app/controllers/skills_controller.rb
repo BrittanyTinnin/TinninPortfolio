@@ -1,4 +1,5 @@
 class SkillsController < ApplicationController
+  before_action :set_skill, only: [:destroy]
 
   def index
     @skills = Skill.all
@@ -33,12 +34,21 @@ class SkillsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @skill.destroy
+    respond_to do |format|
+      format.html { redirect_to about_url, notice: 'Skill was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
 
   def skill_params
-    params.require(:skill).permit(:title)
+    params.require(:skill).permit(:title, :percent_utilized)
+  end
+
+  def set_skill
+    @skill = Skill.find(params[:id])
   end
 end

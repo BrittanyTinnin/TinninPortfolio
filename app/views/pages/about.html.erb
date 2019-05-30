@@ -13,12 +13,14 @@
     </div>
   </div>
 </div>
+    <% @skills.each do |skill| %>
+      <%= skill.title %>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
+      </div>
+      <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      <br>
+    <% end %>
 
-<% @skills.each do |skill| %>
-  <%= skill.title %>
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>"></div>
-  </div>
-<% end %>
 
 <%= link_to 'Create Skill', new_skill_path %>
