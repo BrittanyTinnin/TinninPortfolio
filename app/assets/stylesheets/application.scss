@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
- #page-container {
+#page-container {
   position: relative;
   min-height: 100vh;
 }
@@ -25,12 +25,8 @@
   height: 2.5rem;            /* Footer height */
 }
 
-.progress {
-  
-}
 
-
- @import "bootstrap";
+@import "bootstrap";
 @import "portfolios"
 
 
