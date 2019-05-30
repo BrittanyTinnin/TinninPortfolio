@@ -7,10 +7,18 @@
     <div class="container">
       <h1 class="jumbotron-heading">Portfolio</h1>
       <p class="lead text-muted">I've listed my projects I've built as a student and alumni of Flatiron. These application include a wide range of technologies including, but not limited to, Ruby, Ruby On Rails, JavaScript, React, and etc.</p>
-      <p>
-        <%= link_to 'Blog', blogs_path, class: 'btn btn-primary'%>
-        <%= link_to 'Contact', contact_path, class: 'btn btn-secondary'%>
-      </p>
+			<%= link_to 'https://github.com/BrittanyTinnin', target: '_blank' do %>
+				<span class="fab fa-github" style="font-size: 3em; color: black"></span>
+			<% end %>
+			<%= link_to 'https://twitter.com/tinfullstackdev', target: '_blank' do %>
+				<span class="fab fa-twitter" style="font-size: 3em; color: black"></span>
+			<% end %>
+			<%= link_to 'https://www.linkedin.com/in/brittanytinnin/', target: '_blank' do %>
+				<span class="fab fa-linkedin" style="font-size: 3em; color: black"></span>
+			<% end %>
+			<%= link_to 'https://medium.com/@brittanytinnin', target: '_blank' do %>
+				<span class="fab fa-medium" style="font-size: 3em; color: black"></span>
+			<% end %>
     </div><!-- div.container -->
   </section>
 
