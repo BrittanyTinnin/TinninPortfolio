@@ -10,7 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- */
+*/
+
+
+/**
+  Footer
+**/
+
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -25,6 +31,11 @@
   height: 2.5rem;            /* Footer height */
 }
 
+
+/**
+  Background Video
+**/
+
 #background {
   position: fixed;
   top: 50%;
@@ -36,6 +47,13 @@
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+}
+
+/**
+  Home
+**/
+.welcome {
+  color: white;
 }
 
 
