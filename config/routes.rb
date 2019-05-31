@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
+  get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  resources :users
+  resources :users, only: [:create, :destroy]
   
   resources :skills
   
   resources :portfolios
 
-  resources :blogs
+  # resources :blogs
 
   resources :topics
 
