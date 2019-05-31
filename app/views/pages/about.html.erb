@@ -1,20 +1,21 @@
 <br>
-<div class="card w-75 text-center container-fluid">
+<div class="card w-75 container-fluid">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <%= image_tag "cute_dog.jpg", width: 400 %>
+      <%= image_tag "cute_dog.jpg", width: 400, height: 400 %>
       <% @skills.each do |skill| %>
         <%= skill.title %>
         <div class="progress" style="width: 100%">
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
         </div>
-        <div class="card-body">
-          <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-        </div>
-      <br>
+          <% if current_user %>
+            <div class="card-body">
+              <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            </div>
+          <% end %>
       <% end %> 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 text-center">
       <div class="card-body">
         <h5 class="card-title">About</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.</p>
@@ -34,3 +35,6 @@
     </div>
   </div> 
 </div>
+<% if current_user %>
+  <%= link_to 'New Skill', new_skill_path, class: 'btn btn-success' %>
+<% end %>

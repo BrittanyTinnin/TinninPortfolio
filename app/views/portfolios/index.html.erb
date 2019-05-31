@@ -1,6 +1,6 @@
-
-<%= link_to "New Item", new_portfolio_path %>
-
+<% if current_user %>
+	<%= link_to "New Item", new_portfolio_path %>
+<% end %>
 
 <main role="main">
   <section class="jumbotron text-center bg-white">
