@@ -12,6 +12,11 @@
  *
 */
 
+html,
+body {
+  height: 100%;
+}
+
 
 /**
   Footer
@@ -57,7 +62,10 @@
 }
 
 
+
+
 @import "bootstrap";
-@import "portfolios"
+@import "portfolios";
+@import "users";
 
 
