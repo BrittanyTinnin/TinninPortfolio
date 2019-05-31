@@ -5,22 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-1.times do
-	Topic.create!(
-		title: "JavaScript"
-	)
-end
 
-12.times do 
-    Blog.create!(
-        title: Faker::Book.title,
-		body: Faker::Lorem.paragraph,
-		status: "draft",
-		topic_id: 1
-    )
-end
-
-10.times do |portfolio_item|
+5.times do |portfolio_item|
     Portfolio.create!(
 			title: "Portfolio title #{portfolio_item}",
 			subtitle: Faker::Lorem.word,
@@ -31,9 +17,26 @@ end
     )
 end
 
-5.times do |skill|
+1.times do 
 	Skill.create!(
-		title: "Rails #{skill}",
-		percent_utilized: 15
+		title: "JavaScript", percent_utilized: 35
+	)
+end
+
+1.times do 
+	Skill.create!(
+		title: "Ruby", percent_utilized: 45
+	)
+end
+
+1.times do 
+	Skill.create!(
+		title: "Ruby On Rails", percent_utilized: 50
+	)
+end
+
+1.times do 
+	Skill.create!(
+		title: "React", percent_utilized: 35
 	)
 end

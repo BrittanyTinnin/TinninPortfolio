@@ -8,13 +8,20 @@
 
 
   <div class="card mx-auto" style="width: 40rem;">
-    <%= image_tag(@portfolio.main_image.url, class: 'card-img-top') unless @portfolio.main_image.url.nil? %>
+    <%= video_tag(
+      @portfolio.main_image.url,
+      autoplay: true,
+      muted: true,
+      loop: true,
+      class: 'card-img-top') unless @portfolio.main_image.url.nil? %>
   </div>
   <br>
 
   <div class="btn-group" role="group" aria-label="Basic example">
+    <% if current_user %>
     <%= link_to 'Edit', edit_portfolio_path, class: 'btn btn-warning' %>
     <%= link_to 'Delete', @portfolio, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <% end %>
     <%= link_to 'Back', portfolios_path, class: 'btn btn-secondary' %>
   </div>
 </div>
