@@ -40,6 +40,9 @@ gem 'octicons_helper' # This rails helper let's you easily include svg octicons 
 gem 'fog-aws' #carrier storage
 gem 'dotenv-rails'
 
+gem 'rails_12factor', group: :production
+
+
 
 
 
