@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-
+  before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
   def index
     @topics = Topic.all
   end

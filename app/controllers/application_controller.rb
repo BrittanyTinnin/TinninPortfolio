@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to login_url if !!current_user
+    redirect_to login_url if !current_user
   end
 end

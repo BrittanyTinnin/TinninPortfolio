@@ -21,7 +21,7 @@
   </div>
 
   <div class="custom-file">
-    <p><%= image_tag(portfolio.thumb_image_url) if portfolio.thumb_image? %></p>
+    <p><%= image_tag(portfolio.thumb_image_url) if portfolio.thumb_image.nil? %></p>
     <%= form.label :thumb_image, class: 'custom-file-label' %>
     <p><%= form.file_field :thumb_image, class: 'custom-file-input' %></p>
     <p><%= form.hidden_field :thumb_image_cache %></p>
@@ -29,7 +29,7 @@
 
   
   <div class="custom-file">
-    <p><%= image_tag(portfolio.main_image_url) if portfolio.main_image? %></p>
+    <p><%= image_tag(portfolio.main_image_url) if portfolio.main_image.nil? %></p>
     <p><%= form.file_field :main_image, class: 'custom-file-input', id: 'customFile'%></p>
     <%= form.label :main_image, class: 'custom-file-label', for: 'customFile'%>
     <p><%= form.hidden_field :main_image_cache %></p>
