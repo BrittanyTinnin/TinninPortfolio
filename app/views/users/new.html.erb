@@ -10,12 +10,12 @@
 
       <div class="form-group" id="inputEmail">
         <%= form.label :password, class: 'sr-only' %>
-        <%= form.text_field :password, class: 'form-control', placeholder: :password %>
+        <%= form.password_field :password, class: 'form-control', placeholder: :password %>
       </div>
     
       <div class="form-group" id="inputPassword">
         <%= form.label :password_confirmation, class: 'sr-only' %>
-        <%= form.text_field :password_confirmation,class: 'form-control', placeholder: :password_confirmation %>
+        <%= form.password_field :password_confirmation,class: 'form-control', placeholder: :password_confirmation %>
         <small id="passwordHelpInline" class="text-muted">
           Password must be minimun 6 characters long.
         </small>
