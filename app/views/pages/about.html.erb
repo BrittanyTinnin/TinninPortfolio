@@ -15,17 +15,19 @@
       <div class="card-body">
         <h3 class="card-title font-weight-bold">About Me</h3>
         <p class="card-text pb-3">Highly motivated, determined, driven, work-hard Full Stack Web Developer & Software Engineer. Passionate about Web Development & Software Engineering and learning new things as well as solving real world problems. I fell in love with Programming because I realised that I can make an impact on people by just using my imagination and passion when building applications. I give 100% in all my work to provide great and exceptionally satisfying results.</p>
-        <% @skills.each do |skill| %>
-          <span class="font-weight-bold"><%= skill.title %></span>
-          <div class="progress" style="width: 100%">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
-          </div>
-          <% if current_user %>
-            <div class="card-body">
-              <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <% if @skills %>
+          <% @skills.each do |skill| %>
+            <span class="font-weight-bold"><%= skill.title %></span>
+            <div class="progress" style="width: 100%">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
             </div>
-          <% end %>
-        <% end %> 
+            <% if current_user %>
+              <div class="card-body">
+                <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+              </div>
+            <% end %>
+          <% end %> 
+        <% end %>
         <div class="pt-5">
           <%= link_to 'https://github.com/BrittanyTinnin', target: '_blank' do %>
             <span class="fab fa-github" style="font-size: 2em; color: black"></span>
