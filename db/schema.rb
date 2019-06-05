@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_220755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
-    t.integer "status"
+    t.integer "status", default: 0
     t.integer "topic_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
   end
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_220755) do
     t.text "subtitle"
     t.text "body"
     t.text "thumb_image"
+    t.text "video"
     t.text "source_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
