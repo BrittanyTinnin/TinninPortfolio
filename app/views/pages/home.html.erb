@@ -6,6 +6,16 @@
   id: 'background'
 ) %>
 
+<% flash.each do |name, msg| -%>
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong><%= content_tag :div, msg, class: name %></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% end -%>
+
 <div class="text-center mt-5 welcome">
   <h1>Welcome to My Online Home</h1>
 </div>
+

@@ -1,3 +1,15 @@
+
+
+<% flash.each do |name, msg| -%>
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong><%= content_tag :div, msg, class: name %></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% end -%>
+
+
 <div class="body-shape">
   <div class="form-signin text-center">
     <h1>Login</h1>
