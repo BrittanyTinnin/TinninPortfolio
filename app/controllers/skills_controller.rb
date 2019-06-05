@@ -14,7 +14,10 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to about_url, notice: 'Skill was successfully created.' }
+        format.html { 
+          flash[:notice] = 'Skill was successfully created.'
+          redirect_to about_url
+        }
         format.json { render :show, status: :created, location: @skill }
       else
         format.html { render :new }

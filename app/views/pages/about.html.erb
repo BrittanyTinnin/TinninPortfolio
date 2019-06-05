@@ -15,7 +15,7 @@
       <div class="card-body">
         <h3 class="card-title font-weight-bold">About Me</h3>
         <p class="card-text pb-3">Highly motivated, determined, driven, work-hard Full Stack Web Developer & Software Engineer. Passionate about Web Development & Software Engineering and learning new things as well as solving real world problems. I fell in love with Programming because I realised that I can make an impact on people by just using my imagination and passion when building applications. I give 100% in all my work to provide great and exceptionally satisfying results.</p>
-        <% if !@skills %>
+        <% if @skills.length > 0 %>
           <% @skills.each do |skill| %>
             <span class="font-weight-bold"><%= skill.title %></span>
             <div class="progress" style="width: 100%">
