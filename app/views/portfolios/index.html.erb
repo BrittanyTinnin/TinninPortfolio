@@ -25,21 +25,23 @@
 	<div class="album py-5 bg-dark">
 		<div class="container">
 			<div class="row">
-				<% @portfolios.each do |portfolio| %>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<%= image_tag(portfolio.thumb_image.url, class: 'img-thumbnail') unless portfolio.thumb_image.url.nil? %>
-								<div class="card-body">
-									<p class="card-text text-center"><%= portfolio.title %></p>
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="btn-group">
-												<%= link_to "View", portfolio_path(portfolio.id), class: "btn btn-sm btn-outline-secondary"%>
-											</div><!-- div.btn-group -->
-											<small class="text-muted"><%= portfolio.updated_at.strftime("%B %Y") %></small>
-										</div>
-								</div><!-- div.card-body -->
-						</div><!-- div.card mb-4 -->
-					</div><!-- div.col-md-4 -->
+				<% if !@portfolios %>
+					<% @portfolios.each do |portfolio| %>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<%= image_tag(portfolio.thumb_image.url, class: 'img-thumbnail') unless portfolio.thumb_image.url.nil? %>
+									<div class="card-body">
+										<p class="card-text text-center"><%= portfolio.title %></p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="btn-group">
+													<%= link_to "View", portfolio_path(portfolio.id), class: "btn btn-sm btn-outline-secondary"%>
+												</div><!-- div.btn-group -->
+												<small class="text-muted"><%= portfolio.updated_at.strftime("%B %Y") %></small>
+											</div>
+									</div><!-- div.card-body -->
+							</div><!-- div.card mb-4 -->
+						</div><!-- div.col-md-4 -->
+					<% end %>
 				<% end %>
 			</div><!-- div.row -->
 		</div><!-- div.container -->
