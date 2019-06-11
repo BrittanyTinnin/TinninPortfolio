@@ -2,8 +2,8 @@
   <h1><%= @portfolio.title %></h1>
   <p><%= @portfolio.subtitle %></p>
   <p><%= @portfolio.body %></p>
-  <p><%= link_to @portfolio.source_code do %>
-    <%= octicon "mark-github", :height => 32, target: '_blank' %>
+  <p><%= link_to @portfolio.source_code, target: '_blank' do %>
+    <%= octicon "mark-github", :height => 32 %>
   <% end %></p>
 
 
