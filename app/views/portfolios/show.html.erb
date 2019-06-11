@@ -8,14 +8,8 @@
 
 
   <div class="card mx-auto" style="width: 40rem;">
-    <%= video_tag(
-      @portfolio.main_image.url,
-      autoplay: true,
-      muted: true,
-      loop: true,
-      class: 'card-img-top') unless @portfolio.main_image.url.nil? %>
+    <%= image_tag(@portfolio.main_image.url, class: 'img-thumbnail') unless @portfolio.main_image.url.nil? %>
   </div>
-  <br>
 
   <div class="btn-group" role="group" aria-label="Basic example">
     <% if current_user %>
