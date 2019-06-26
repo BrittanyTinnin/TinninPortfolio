@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :contacts
-  get 'contact_form/new'
-  get 'contact_form/create'
+  resources :contacts, only: [:new, :create]
+  # get '/contact', to: 'contact#new'
   root to: 'pages#home'
 
   get '/signup', to: 'users#new'
@@ -19,7 +18,6 @@ Rails.application.routes.draw do
 
   resources :topics
 
-  get '/contact', to: 'pages#contact'
   get '/about', to: 'pages#about'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
