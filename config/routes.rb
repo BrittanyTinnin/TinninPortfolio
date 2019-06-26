@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :contacts, only: [:new, :create]
-  # get '/contact', to: 'contact#new'
   root to: 'pages#home'
 
   get '/signup', to: 'users#new'
