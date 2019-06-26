@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get 'contact_form/new'
   get 'contact_form/create'
   root to: 'pages#home'
