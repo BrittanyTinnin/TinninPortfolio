@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contact_form/new'
+  get 'contact_form/create'
   root to: 'pages#home'
 
   get '/signup', to: 'users#new'
