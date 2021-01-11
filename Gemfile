@@ -32,7 +32,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2.4' # generate slug urls
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails' # bootstrap
-gem 'redcarpet', '~> 3.3', '>= 3.3.4' # implement markdown
+gem 'redcarpet', '~> 3.5' # implement markdown
 gem 'coderay', '~> 1.1', '>= 1.1.2' # implement code syntax highlight
 gem "mini_magick" # reduces image memory utilization
 gem 'carrierwave', '~> 1.0' # easy way to upload images and videos
